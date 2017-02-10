@@ -7,3 +7,6 @@
 [submodule "pack/core/start/asyncrun"]
 	path = pack/core/start/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "pack/core/start/python-mode"]
+	path = pack/core/start/python-mode
+	url = https://github.com/klen/python-mode.git
