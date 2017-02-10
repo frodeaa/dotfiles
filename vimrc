@@ -8,6 +8,8 @@ set fileencoding=utf-8
 set smartindent
 set cursorline
 
+let mapleader = ','
+
 syntax on
 filetype plugin indent on
 colorscheme solarized
