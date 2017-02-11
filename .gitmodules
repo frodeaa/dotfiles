@@ -16,3 +16,6 @@
 [submodule "pack/core/start/vim-javascript"]
 	path = pack/core/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "pack/core/start/vim-jsx"]
+	path = pack/core/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
