@@ -10,6 +10,10 @@ set cursorline
 
 let mapleader = ','
 
+" Map Ctrl-å to Ctrl-] (command for following links), since Ctrl-] doesn't
+" work with Norwegian keyboard layout (on Macs at least)
+map <C-å> <C-]>
+
 syntax on
 filetype plugin indent on
 colorscheme solarized
