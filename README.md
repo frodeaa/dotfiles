@@ -11,7 +11,7 @@ Create symlink:
 
 ## Packages
 
-Packages instead from submodule
+Packages installed from submodules
 
  - [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim): Run Async Shell Commands in Vim 8.0 and Output to Quickfix Window.
  - [ctrlp.vim](https://github.com/kien/ctrlp.vim): Fuzzy file, buffer, mru, tag, etc finder.
