@@ -17,3 +17,6 @@ map <C-å> <C-]>
 syntax on
 filetype plugin indent on
 colorscheme solarized
+
+" AsyncRun with vim-fugitive
+command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
