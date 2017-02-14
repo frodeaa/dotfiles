@@ -1,4 +1,8 @@
-# Installation
+# Vim Configuration
+
+Requires Vim 8 (support for packages)
+
+## Installation
 
     git clone git@github.com:frodeaa/dotvim.git ~/.vim
     cd ~/.vim
