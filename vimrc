@@ -1,3 +1,4 @@
+set nocompatible
 set hidden
 set number
 set vb t_vb=
@@ -15,6 +16,10 @@ let mapleader = ','
 " Map Ctrl-å to Ctrl-] (command for following links), since Ctrl-] doesn't
 " work with Norwegian keyboard layout (on Macs at least)
 map <C-å> <C-]>
+
+" edit/reload the vim rc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 syntax on
 filetype plugin indent on
