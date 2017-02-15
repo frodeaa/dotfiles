@@ -7,6 +7,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set smartindent
 set cursorline
+set statusline=%<%F%h%m%r%h%w%y\ %=col:%c%V\ lin:%l\,%L\ %P
+set laststatus=2
 
 let mapleader = ','
 
