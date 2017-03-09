@@ -19,3 +19,6 @@
 [submodule "pack/core/start/vim-jsx"]
 	path = pack/core/start/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "pack/core/start/vim-go"]
+	path = pack/core/start/vim-go
+	url = git@github.com:fatih/vim-go.git

@@ -24,3 +24,4 @@ Packages installed from submodules
  - [vim-fugitive](https://github.com/tpope/vim-fugitive): a Git wrapper so awesome, it should be illegal.
  - [vim-javascript](https://github.com/pangloss/vim-javascript): Vastly improved Javascript indentation and syntax support in Vim.
  - [vim-jsx](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting for vim.
+ - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim https://patreon.com/fatih.
