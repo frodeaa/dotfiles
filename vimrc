@@ -25,6 +25,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 syntax on
 filetype plugin indent on
+set background=light
 colorscheme solarized
 
 " AsyncRun with vim-fugitive
