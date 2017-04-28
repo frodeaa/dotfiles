@@ -25,3 +25,4 @@ Packages installed from submodules
  - [vim-javascript](https://github.com/pangloss/vim-javascript): Vastly improved Javascript indentation and syntax support in Vim.
  - [vim-jsx](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting for vim.
  - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim https://patreon.com/fatih.
+ - [vimux](https://github.com/benmills/vimux): vim plugin to interact with tmux

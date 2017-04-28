@@ -22,3 +22,6 @@
 [submodule "pack/core/start/vim-go"]
 	path = pack/core/start/vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule "pack/core/start/vimux"]
+	path = pack/core/start/vimux
+	url = git@github.com:benmills/vimux.git
