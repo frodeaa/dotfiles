@@ -23,6 +23,10 @@ map <C-å> <C-]>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" configure netrw to
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
 syntax on
 filetype plugin indent on
 set background=light
