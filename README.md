@@ -14,7 +14,7 @@ Requires Vim 8 (support for packages)
 
 Create symlink:
 
-    ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+    ln -s ~/.dotfiles/vimrc ~/.vimrc
 
 ### Packages
 
