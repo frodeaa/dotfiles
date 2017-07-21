@@ -1,19 +1,22 @@
-# Vim Configuration
+# Dotfiles
+
+## Vim Configuration
 
 Requires Vim 8 (support for packages)
 
-## Installation
+### Installation
 
-    git clone git@github.com:frodeaa/dotvim.git ~/.vim
+    git clone git@github.com:frodeaa/dotfiles.git ~/.dotfiles
+    ln -s ~/.dotfiles ~/.vim
     cd ~/.vim
     git submodule init
     git submodule update
 
 Create symlink:
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 
-## Packages
+### Packages
 
 Packages installed from submodules
 
