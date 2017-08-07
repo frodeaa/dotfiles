@@ -7,14 +7,18 @@ Requires Vim 8 (support for packages)
 ### Installation
 
     git clone git@github.com:frodeaa/dotfiles.git ~/.dotfiles
-    ln -s ~/.dotfiles ~/.vim
-    cd ~/.vim
-    git submodule init
-    git submodule update
 
 Create symlink:
 
     ln -s ~/.dotfiles/vimrc ~/.vimrc
+    ln -s ~/.dotfiles/vim ~/.vim
+
+Checkout plugins:
+
+    cd ~/.vim
+    git submodule init
+    git submodule update
+
 
 ### Packages
 
