@@ -36,8 +36,14 @@ Packages installed from submodules
 
 ## Tmux
 
+Install and configure Tmux
+
     brew install tmux reattach-to-user-namespace
 
+    # install temperature script
+    $ install -m 0755 scripts/temperature.sh /usr/local/bin
+
+    # create symlink to tmux.conf
     ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
     # install Tmux plugin manager
