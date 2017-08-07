@@ -33,3 +33,12 @@ Packages installed from submodules
  - [vim-jsx](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting for vim.
  - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim https://patreon.com/fatih.
  - [vimux](https://github.com/benmills/vimux): vim plugin to interact with tmux
+
+## Tmux
+
+    brew install tmux reattach-to-user-namespace
+
+    ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+
+    # install Tmux plugin manager
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
