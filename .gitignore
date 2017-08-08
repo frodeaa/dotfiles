@@ -1,1 +1,15 @@
+integrationtests/handlers/logs/
+*.iml
+tags
+.idea
 .ropeproject
+.DS_Store
+*.swp
+*.swo
+.netrwhist
+env
+.env
+*.egg-info
+.bash_history
+.node-gyp
+.npm
