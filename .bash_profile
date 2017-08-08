@@ -3,6 +3,7 @@ shopt -s histappend              # append new history items to .bash_history
 
 alias g=git
 alias src="cd ~/src"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export AUDIBLE_ACTIVATION_BYTES=5e855901
 export EDITOR=/usr/local/bin/vim
