@@ -52,6 +52,6 @@ sslcacertfile = /usr/local/etc/openssl/cert.pem
 enabled = yes
 filename = ~/.mutt/mailboxes
 header = "mailboxes "
-peritem = "+%(accountname)s/%(foldername)s"
+peritem = "+%(foldername)s"
 sep = " "
 footer = "\n"
