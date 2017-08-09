@@ -3,7 +3,7 @@ set sendmail    = /usr/bin/msmtp
 
 set folder      = ~/mail/frodeaa
 set spoolfile   = "+INBOX"
-set mbox        = "+[Gmail]/All Mail"
+set mbox        = "+archive"
 set postponed   = "+drafts"
 unset record
 

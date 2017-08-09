@@ -18,7 +18,6 @@ nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
                             'starred': '[Gmail]/Starred',
                             'trash':   '[Gmail]/Trash',
                             'archive': '[Gmail]/All Mail',
-                            'chats':   '[Gmail]/Chats',
                             }.get(folder, folder)
 sep = /
 
@@ -40,10 +39,10 @@ nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
                             '[Gmail]/Trash':     'trash',
                             '[Gmail]/All Mail':  'archive',
                             }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/All Mail',
-                                             '[Gmail]/Important',
+folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                              '[Gmail]/Starred',
                                              '[Gmail]/flagged',
+                                             '[Gmail]/Chats',
                                              'flagged',
                                              ]
 ssl = true
