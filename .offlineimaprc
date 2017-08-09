@@ -20,7 +20,6 @@ nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
                             'archive': '[Gmail]/All Mail',
                             'chats':   '[Gmail]/Chats',
                             }.get(folder, folder)
-folderfilter = lambda folder: folder == 'INBOX'
 sep = /
 
 [Repository Gmail-Remote]
