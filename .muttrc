@@ -9,12 +9,10 @@ unset record
 
 mailboxes +INBOX
 
-macro index D \
-    "<save-message>+trash<enter>" \
-    "move message to the trash"
-
-macro index S \
-    "<save-message>+spam<enter>" \
-    "mark message as spam"
+bind editor <space> noop
+macro index,pager ge "<save-message>=archieve<enter><enter>" "Archive"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=archive<enter>" "Go to archive"
+macro index gd "<change-folder>=drafts<enter>" "Go to drafts"
 
 source .mutt-colors-solarized-dark-16.muttrc
