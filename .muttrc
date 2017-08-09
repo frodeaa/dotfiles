@@ -15,4 +15,6 @@ macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=archive<enter>" "Go to archive"
 macro index gd "<change-folder>=drafts<enter>" "Go to drafts"
 
+auto_view text/html
+
 source .mutt-colors-solarized-dark-16.muttrc
