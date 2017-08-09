@@ -1,5 +1,5 @@
 set mbox_type   = Maildir
-set sendmail    = /usr/bin/msmtp
+set sendmail    = /usr/local/bin/msmtp
 
 set folder      = ~/mail/frodeaa
 set spoolfile   = "+INBOX"
@@ -16,3 +16,5 @@ macro index D \
 macro index S \
     "<save-message>+spam<enter>" \
     "mark message as spam"
+
+source .mutt-colors-solarized-dark-16.muttrc
