@@ -1,6 +1,10 @@
 set mbox_type   = Maildir
 set sendmail    = /usr/local/bin/msmtp
+set realname    = "Frode Aannevik"
+set from        = "frode.aa@gmail.com"
 
+set copy        = no
+set move        = no
 set folder      = ~/mail/frodeaa
 set spoolfile   = "+INBOX"
 set mbox        = "+archive"
@@ -9,7 +13,6 @@ unset record
 
 mailboxes +INBOX
 
-bind editor <space> noop
 macro index,pager ge "<save-message>=archive<enter><enter>" "Archive"
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=archive<enter>" "Go to archive"
@@ -21,7 +24,7 @@ unset move           # gmail does that
 set delete           # don't ask, just do
 unset confirmappend  # don't ask, just do!
 set quit             # don't ask, just do!!
-unset mark_old       # read/new is good enough for me
+#unset mark_old       # read/new is good enough for me
 
 # sort/threading
 set sort     = threads
@@ -47,5 +50,10 @@ set forward_quote
 ignore *                               # first, ignore all headers
 unignore from: to: cc: date: subject:  # then, show only these
 hdr_order from: to: cc: date: subject: # and in this order
+
+# Caches
+set header_cache='~/.mutt/.cache/headercache'
+set message_cachedir='~/.mutt/.cache/messagecache'
+set certificate_file='~/.mutt/.cache/certificates'
 
 source .mutt-colors-solarized-dark-16.muttrc

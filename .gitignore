@@ -16,4 +16,3 @@ integrationtests/handlers/logs/
 tags
 .offlineimap
 .offlineimap-helpers.py
-.msmtprc
