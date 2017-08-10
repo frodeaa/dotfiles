@@ -7,6 +7,8 @@ fsync = False
 [Account Gmail]
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
+postsynchook = notmuch new
+restoreatime = no
 
 [Repository Gmail-Local]
 type = Maildir
