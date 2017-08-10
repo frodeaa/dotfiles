@@ -13,6 +13,12 @@ export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export HOMEBREW_NO_ANALYTICS=1
+export PATH="$HOME/.bin:/usr/local/bin:$PATH"
+export PERL_LOCAL_LIB_ROOT="$HOME/perl5"
+export PERL5LIB="$PERL_LOCAL_LIB_ROOT/lib/perl5"
+export PERL_MB_OPT="--install_base \"$PERL_LOCAL_LIB_ROOT\""
+export PERL_MM_OPT="INSTALL_BASE=$PERL_LOCAL_LIB_ROOT"
+export PATH="$PERL_LOCAL_LIB_ROOT/bin:$PATH";
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
