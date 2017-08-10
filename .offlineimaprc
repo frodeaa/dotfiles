@@ -26,9 +26,9 @@ maxconnections = 2
 type = Gmail
 remoteuser = frode.aa@gmail.com
 auth_mechanisms = XOAUTH2
-oauth2_client_id_eval = get_gmail_client_id()
-oauth2_client_secret_eval = get_gmail_client_secret()
-oauth2_refresh_token_eval = get_gmail_refresh_token()
+oauth2_client_id_eval = subprocess.check_output(["pass", "show", "mail/client_id"]).strip()
+oauth2_client_secret_eval = subprocess.check_output(["pass", "show", "mail/client_secret"]).strip()
+oauth2_refresh_token_eval = subprocess.check_output(["pass", "show", "mail/refresh_token"]).strip()
 
 realdelete = no
 nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
