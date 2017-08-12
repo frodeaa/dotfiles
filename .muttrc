@@ -56,6 +56,10 @@ set forward_format = "Fwd: %s"
 set include
 set forward_quote
 
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
 ignore *                               # first, ignore all headers
 unignore from: to: cc: date: subject:  # then, show only these
 hdr_order from: to: cc: date: subject: # and in this order
