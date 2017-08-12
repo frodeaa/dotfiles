@@ -13,6 +13,7 @@ export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_GITHUB_API=1
 export PATH="$HOME/.bin:/usr/local/bin:$PATH"
 export PERL_LOCAL_LIB_ROOT="$HOME/perl5"
 export PERL5LIB="$PERL_LOCAL_LIB_ROOT/lib/perl5"
