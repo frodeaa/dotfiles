@@ -65,5 +65,5 @@ set header_cache='~/.mutt/.cache/headercache'
 set message_cachedir='~/.mutt/.cache/messagecache'
 set certificate_file='~/.mutt/.cache/certificates'
 
-source .mutt-colors-solarized-dark-16.muttrc
-source .mutt/notmuch-mutt.rc
+source ~/.mutt-colors-solarized-dark-16.muttrc
+source ~/.mutt/notmuch-mutt.rc
