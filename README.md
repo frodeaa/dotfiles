@@ -73,4 +73,5 @@ installed formulae.
  - reattach-to-user-namespace
  - tmux
  - tree
+ - urlview
  - w3m
