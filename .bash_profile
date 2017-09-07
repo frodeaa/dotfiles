@@ -23,6 +23,9 @@ export PATH="$PERL_LOCAL_LIB_ROOT/bin:$PATH";
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
+source /usr/local/etc/bash_completion.d/pass
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "hh -- \C-j"'; fi
 
