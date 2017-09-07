@@ -27,9 +27,11 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
+autocmd BufWritePre * %s/\s\+$//e
+
 syntax on
 filetype plugin indent on
-set background=dark
+set background=light
 colorscheme solarized
 
 " AsyncRun with vim-fugitive
