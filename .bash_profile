@@ -26,6 +26,10 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file s
 source /usr/local/etc/bash_completion.d/pass
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+print_colors() {
+  for i in {0..255} ; do printf "\x1b[38;5;${i}m███████████████"; printf "%03d" ${i}; done
+}
+
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "hh -- \C-j"'; fi
 
