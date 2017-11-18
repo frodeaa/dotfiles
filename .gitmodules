@@ -34,3 +34,6 @@
 [submodule ".vim/pack/core/start/tsuquyomi"]
 	path = .vim/pack/core/start/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
+[submodule ".vim/pack/core/start/vim-js-indent"]
+	path = .vim/pack/core/start/vim-js-indent
+	url = https://github.com/jason0x43/vim-js-indent.git
