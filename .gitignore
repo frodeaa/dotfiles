@@ -12,7 +12,9 @@
 .npm
 .ropeproject
 env
+node_modules
 integrationtests/handlers/logs/
 tags
 .offlineimap
 .offlineimap-helpers.py
+.gradle
