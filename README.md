@@ -75,7 +75,9 @@ installed formulae.
  - pass
  - perl
  - reattach-to-user-namespace
+ - the_silver_searcher
  - tmux
  - tree
+ - typescript
  - urlview
  - w3m
