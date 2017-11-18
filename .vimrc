@@ -18,6 +18,7 @@ let mapleader = ','
 " Map Ctrl-å to Ctrl-] (command for following links), since Ctrl-] doesn't
 " work with Norwegian keyboard layout (on Macs at least)
 map <C-å> <C-]>
+map <f9> :make
 
 " edit/reload the vim rc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
