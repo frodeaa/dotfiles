@@ -1,68 +1,9 @@
-set mbox_type   = Maildir
-set sendmail    = /usr/local/bin/msmtp
-set realname    = "Frode Aannevik"
-set from        = "frode.aa@gmail.com"
+set spoolfile = "+frodeaa/INBOX"
 
-set copy        = no
-set move        = no
-set folder      = ~/mail/frodeaa
-set spoolfile   = "+INBOX"
-set mbox        = "+archive"
-set postponed   = "+drafts"
-unset record
+source ~/.mutt/frode.aa\@gmail.com
 
-mailboxes +INBOX
-
-macro index,pager ge "<save-message>=archive<enter><enter>" "Archive"
-macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index ga "<change-folder>=archive<enter>" "Go to archive"
-macro index gd "<change-folder>=drafts<enter>" "Go to drafts"
-macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
-bind compose p postpone-message
-
-auto_view text/html
-
-unset move           # gmail does that
-set delete           # don't ask, just do
-unset confirmappend  # don't ask, just do!
-set quit             # don't ask, just do!!
-unset mark_old       # read/new is good enough for me
-
-# Index view options
-set date_format = "!%Y-%m-%d %H:%M %Z"
-set index_format = "%Z  %D  %-20.20F  (%4c)  %s"
-
-set editor='vim + -c "set nocp" -c "set textwidth=72" -c "set wrap" -c "silent /^$" -c "noh" -c "vmap <leader>s c[... snip ...]<ESC>"
-
-# sort/threading
-set sort     = threads
-set sort_aux = reverse-last-date-received
-set sort_re
-
-# look and feel
-set pager_index_lines = 8     # number of index lines to show
-set pager_context     = 5     # number of context lines to show
-set pager_stop                # dont go to next message automatically
-set menu_scroll               # scroll in menus
-set smart_wrap
-set tilde                     # show tildes like in vim
-unset markers                 # no ugly plus signs
-
-# composing
-set fcc_attach
-unset mime_forward
-set forward_format = "Fwd: %s"
-set include
-set forward_quote
-
-set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
-bind editor <Tab> complete-query
-bind editor ^T    complete
-
-ignore *                               # first, ignore all headers
-unignore from: to: cc: date: subject:  # then, show only these
-hdr_order from: to: cc: date: subject: # and in this order
+folder-hook frodeaa/* source ~/.mutt/frode.aa\@gmail.com
+folder-hook dintero/* source ~/.mutt/frode\@dintero.com
 
 # Caches
 set header_cache='~/.mutt/.cache/headercache'
