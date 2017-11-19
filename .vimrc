@@ -32,7 +32,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 syntax on
 filetype plugin indent on
-set background=light
+set background=dark
 colorscheme solarized
 
 " AsyncRun with vim-fugitive
