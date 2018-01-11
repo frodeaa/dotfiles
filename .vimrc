@@ -33,6 +33,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
+" configure ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 autocmd BufWritePre * %s/\s\+$//e
 
 syntax on
