@@ -6,6 +6,7 @@ alias src="cd ~/src"
 alias s="cd ~/src"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias lb='vim ~/Documents/logbook/$(date "+%Y-%m-%d").md'
+alias tmp="cd ~/tmp"
 
 export AUDIBLE_ACTIVATION_BYTES=5e855901
 export EDITOR=/usr/local/bin/vim
