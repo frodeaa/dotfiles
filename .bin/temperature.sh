@@ -24,6 +24,6 @@ URL="https://www.yr.no/place/$1/forecast.xml"
 CITY="$(rev <<< $1 | cut -d '/' -f 1 | rev)"
 
 curl --silent $URL \
- | grep temperature \
+ | grep '<temperature' \
  | head -n 1 \
  | sed "s/.* value=\"\(.*\)\".*/\1°C $CITY/" || echo "$USAGE"
