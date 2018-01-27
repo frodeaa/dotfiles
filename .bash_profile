@@ -27,6 +27,11 @@ export PATH="$PERL_LOCAL_LIB_ROOT/bin:$PATH";
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
+gpgconf --launch gpg-agent
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 source /usr/local/etc/bash_completion.d/pass
 source /usr/local/etc/bash_completion.d/git-completion.bash
 

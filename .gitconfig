@@ -1,6 +1,7 @@
 [user]
   name = Frode Aannevik
   email = frode.aa@gmail.com
+	signingkey = CFFA2237F1526F8F8024EAC918F1D5F4837B359D
 
 [sendemail]
   smtpserver = /usr/local/bin/msmtp
