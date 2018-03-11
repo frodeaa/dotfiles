@@ -43,5 +43,13 @@ filetype plugin indent on
 set background=dark
 colorscheme solarized
 
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+ " when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
 " AsyncRun with vim-fugitive
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
