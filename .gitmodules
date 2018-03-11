@@ -1,36 +1,54 @@
-[submodule "pack/core/start/ctrlp"]
+[submodule ".vim/pack/g/core/start/ctrlp"]
 	path = .vim/pack/core/start/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "pack/core/start/vim-colors-solarized"]
+[submodule ".vim/pack/g/core/start/vim-colors-solarized"]
 	path = .vim/pack/core/start/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "pack/core/start/asyncrun"]
+[submodule ".vim/pack/g/core/start/asyncrun"]
 	path = .vim/pack/core/start/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim.git
-[submodule "pack/core/start/python-mode"]
+[submodule ".vim/pack/g/core/start/python-mode"]
 	path = .vim/pack/core/start/python-mode
 	url = https://github.com/klen/python-mode.git
-[submodule "pack/core/start/vim-fugitive"]
+[submodule ".vim/pack/g/core/start/vim-fugitive"]
 	path = .vim/pack/core/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "pack/core/start/vim-javascript"]
+[submodule ".vim/pack/g/core/start/vim-javascript"]
 	path = .vim/pack/core/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "pack/core/start/vim-jsx"]
+[submodule ".vim/pack/g/core/start/vim-jsx"]
 	path = .vim/pack/core/start/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "pack/core/start/vim-go"]
+[submodule ".vim/pack/g/core/start/vim-go"]
 	path = .vim/pack/core/start/vim-go
 	url = git@github.com:fatih/vim-go.git
-[submodule "pack/core/start/vimux"]
+[submodule ".vim/pack/g/core/start/vimux"]
 	path = .vim/pack/core/start/vimux
 	url = git@github.com:benmills/vimux.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule ".tmux/plugins/tmux-colors-solarized"]
+	path = .tmux/plugins/tmux-colors-solarized
+    url = https://git::@github.com/seebi/tmux-colors-solarized
+[submodule ".tmux/plugins/tmux-copycat"]
+    path = .tmux/plugins/tmux-copycat
+    url = https://git::@github.com/tmux-plugins/tmux-copycat
+[submodule ".tmux/plugins/tmux-open"]
+    path = .tmux/plugins/tmux-open
+    url = https://git::@github.com/tmux-plugins/tmux-open
+[submodule ".tmux/plugins/tmux-prefix-highlight"]
+    path = .tmux/plugins/tmux-prefix-highlight
+    url = https://git::@github.com/tmux-plugins/tmux-prefix-highlight
+[submodule ".tmux/plugins/tmux-sensible"]
+	path = .tmux/plugins/tmux-sensible
+	url = https://git::@github.com/tmux-plugins/tmux-sensible
+[submodule ".tmux/plugins/tmux-spotify"]
+	path = .tmux/plugins/tmux-spotify
+	url = https://git::@github.com/robhurring/tmux-spotify
 [submodule ".vim/pack/core/start/typescript-vim"]
 	path = .vim/pack/core/start/typescript-vim
-	url = git@github.com:leafgarland/typescript-vim.git
+    url = git@github.com:leafgarland/typescript-vim.git
 [submodule ".vim/pack/core/start/tsuquyomi"]
 	path = .vim/pack/core/start/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
