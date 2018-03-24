@@ -68,6 +68,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = /usr/local/bin/vim 
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [diff]
   tool = diffmerge
 [difftool "diffmerge"]

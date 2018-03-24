@@ -65,6 +65,7 @@ installed formulae.
 
  - contacts
  - cpanm
+ - diff-so-fancy
  - git
  - hh
  - msmtp
