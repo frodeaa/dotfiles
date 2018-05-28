@@ -13,6 +13,9 @@ set cursorline
 set statusline=%<%F%h%m%r%h%w%y\ %=col:%c%V\ lin:%l\,%L\ %P
 set laststatus=2
 
+
+let g:pymode_rope=0
+
 if !has('nvim')
     set ttymouse=xterm2
 endif
