@@ -17,6 +17,7 @@ Get forecast temperatur for a place
 
 See yr.no or http://fil.nrk.no/yr/viktigestader/noreg.txt
 for valid place values
+...
 EOM
 )
 
