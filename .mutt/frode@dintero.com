@@ -1,5 +1,5 @@
 set mbox_type   = Maildir
-set sendmail    = /usr/local/bin/msmtp
+set sendmail    = "/usr/local/bin/msmtp -a dintero"
 set realname    = "Frode Aannevik"
 set from        = "frode@dintero.com"
 

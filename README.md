@@ -24,12 +24,20 @@ Manage all dotfiles without symlinking
 Configures sync of gmail using offlineimap. gmail secrets are
 managed by pass
 
-    $ pass mail
-    mail
+    $ pass user@domain.com
     ├── client_id
     ├── client_secret
-    ├── password
+    ├── msmtp_password
     └── refresh_token
+
+Use [create an app password](https://myaccount.google.com/apppasswords)
+to create the `msmtp_password`
+
+### Register OAuth2 client for Gmail
+
+Go to the [Gmail API overview console](https://console.developers.google.com/apis/api/gmail.googleapis.com/overview)
+and create a new project. Create new Credentials, with `Gmail API` as
+type and create an client id for the credentials.
 
  - notmuch is used for search
  - contacts is used to enable system address book
