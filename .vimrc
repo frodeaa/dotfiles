@@ -40,6 +40,12 @@ let g:netrw_liststyle = 3
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 autocmd BufWritePre * %s/\s\+$//e
+au BufRead /tmp/mutt-* set tw=72
+
+augroup filetypedetect
+      " Mail
+autocmd BufRead,BufNewFile *mutt-*              setfiletype mail
+augroup END
 
 syntax on
 filetype plugin indent on

@@ -34,7 +34,10 @@ unset mark_old       # read/new is good enough for me
 set date_format = "!%Y-%m-%d %H:%M %Z"
 set index_format = "%Z  %D  %-20.20F  (%4c)  %s"
 
-set editor='vim + -c "set nocp" -c "set textwidth=72" -c "set wrap" -c "silent /^$" -c "noh" -c "vmap <leader>s c[... snip ...]<ESC>"
+set fast_reply=yes
+set include=yes
+
+set editor='vim -c "set nocp" -c "set textwidth=72" -c "set wrap" -c "silent /^" -c "noh" -c "vmap <leader>s c[... snip ...]<ESC>"
 # sort/threading
 set sort     = threads
 set sort_aux = reverse-last-date-received
