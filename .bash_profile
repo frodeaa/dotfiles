@@ -12,6 +12,7 @@ alias slack="$HOME/go/bin/slack-term -config ~/.slack-term.json"
 export AUDIBLE_ACTIVATION_BYTES=5e855901
 export EDITOR=/usr/local/bin/vim
 export FIGNORE=$FIGNORE:DS_Store
+export GOPATH=$(go env GOPATH)
 export HH_CONFIG=hicolor         # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
@@ -26,7 +27,7 @@ export PERL5LIB="$PERL_LOCAL_LIB_ROOT/lib/perl5"
 export PERL_MB_OPT="--install_base \"$PERL_LOCAL_LIB_ROOT\""
 export PERL_MM_OPT="INSTALL_BASE=$PERL_LOCAL_LIB_ROOT"
 export PATH="$PERL_LOCAL_LIB_ROOT/bin:$PATH";
-export PATH="$HOME/go/bin:$PATH"
+export PATH=$PATH:$(go env GOPATH)/bin
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
