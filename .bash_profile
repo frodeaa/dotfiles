@@ -39,6 +39,14 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file s
 source /usr/local/etc/bash_completion.d/pass
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+gcalcli_dintero() {
+    source ~/.env/bin/activate && gcalcli --configFolder ~/.gcalcli_dintero $@
+}
+
+gcalcli_frodeaa() {
+    source ~/.env/bin/activate && gcalcli --configFolder ~/.gcalcli_frodeaa $@
+}
+
 print_colors() {
   for i in {0..255} ; do printf "\x1b[38;5;${i}m███████████████"; printf "%03d" ${i}; done
 }
