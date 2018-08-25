@@ -55,3 +55,18 @@
 [submodule ".vim/pack/core/start/vim-js-indent"]
 	path = .vim/pack/core/start/vim-js-indent
 	url = https://github.com/jason0x43/vim-js-indent.git
+[submodule ".vim/pack/core/start/syntastic"]
+	path = .vim/pack/core/start/syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule ".vim/pack/core/start/indentpython.vim"]
+	path = .vim/pack/core/start/indentpython.vim
+	url = git@github.com:vim-scripts/indentpython.vim.git
+[submodule ".vim/pack/core/start/YouCompleteMe"]
+	path = .vim/pack/core/start/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe
+[submodule ".vim/pack/core/start/vim-flake8"]
+	path = .vim/pack/core/start/vim-flake8
+	url = git@github.com:nvie/vim-flake8
+[submodule ".vim/pack/core/start/vim-startify"]
+	path = .vim/pack/core/start/vim-startify
+	url = git@github.com:mhinz/vim-startify
