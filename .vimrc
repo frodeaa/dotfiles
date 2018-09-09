@@ -51,6 +51,13 @@ augroup filetypedetect
 autocmd BufRead,BufNewFile *mutt-*              setfiletype mail
 augroup END
 
+"options for mails
+autocmd BufRead,BufNewFile mutt-* call MailHook()
+function MailHook()
+    setlocal textwidth=72
+    setlocal colorcolumn=72
+endfunction
+
 syntax on
 filetype plugin indent on
 set background=dark
