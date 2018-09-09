@@ -16,7 +16,7 @@ set incsearch
 set cursorline
 set statusline=%<%F%h%m%r%h%w%y\ %=col:%c%V\ lin:%l\,%L\ %P
 set laststatus=2
-
+set spell
 
 let g:pymode_rope=0
 

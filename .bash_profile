@@ -28,13 +28,14 @@ export PERL_MB_OPT="--install_base \"$PERL_LOCAL_LIB_ROOT\""
 export PERL_MM_OPT="INSTALL_BASE=$PERL_LOCAL_LIB_ROOT"
 export PATH="$PERL_LOCAL_LIB_ROOT/bin:$PATH";
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
 # gpgconf --launch gpg-agent
-# export GPG_TTY=$(tty)
-# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-# gpg-connect-agent updatestartuptty /bye >/dev/null
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 
 source /usr/local/etc/bash_completion.d/pass
 source /usr/local/etc/bash_completion.d/git-completion.bash
@@ -53,6 +54,16 @@ print_colors() {
 
 activate_aws() {
     source ~/.env/bin/activate
+}
+
+update_terminal_cwd() {
+    # Identify the directory using a "file:" scheme URL,
+    # including the host name to disambiguate local vs.
+    # remote connections. Percent-escape spaces.
+    local SEARCH=' '
+    local REPLACE='%20'
+    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+    printf '\e]7;%s\a' "$PWD_URL"
 }
 
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)

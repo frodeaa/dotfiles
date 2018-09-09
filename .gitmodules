@@ -70,3 +70,6 @@
 [submodule ".vim/pack/core/start/vim-startify"]
 	path = .vim/pack/core/start/vim-startify
 	url = git@github.com:mhinz/vim-startify
+[submodule ".vim/pack/core/start/vim-cfn"]
+	path = .vim/pack/core/start/vim-cfn
+	url = git@github.com:speshak/vim-cfn.git
