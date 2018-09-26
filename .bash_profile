@@ -56,6 +56,18 @@ activate_aws() {
     source ~/.env/bin/activate
 }
 
+restart_docker() {
+    echo "quit and restart docker"
+    osascript -e 'quit app "Docker"'
+    open -a Docker
+    while [ -z "$(docker info 2> /dev/null )" ];
+    do
+        printf ".";
+        sleep 1;
+    done;
+    echo "docker ready!"
+}
+
 update_terminal_cwd() {
     # Identify the directory using a "file:" scheme URL,
     # including the host name to disambiguate local vs.
