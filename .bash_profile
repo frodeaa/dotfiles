@@ -78,6 +78,11 @@ update_terminal_cwd() {
     printf '\e]7;%s\a' "$PWD_URL"
 }
 
+pgp_reset() {
+    gpgconf --kill gpg-agent
+    gpg-connect-agent updatestartuptty /bye >/dev/null
+}
+
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "hh -- \C-j"'; fi
 
