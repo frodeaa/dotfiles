@@ -1,7 +1,7 @@
 [user]
   name = Frode Aannevik
   email = frode.aa@gmail.com
-	signingkey = CFFA2237F1526F8F8024EAC918F1D5F4837B359D
+  signingkey = CFFA2237F1526F8F8024EAC918F1D5F4837B359D
 
 [sendemail]
   smtpserver = /usr/local/bin/msmtp
@@ -52,7 +52,7 @@
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
   lg1 =log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  slacklg = log --graph --pretty=format:'%ad %Cgreen%aN: %Creset %s' --abbrev-commit 
+  slacklg = log --graph --pretty=format:'%ad %Cgreen%aN: %Creset %s' --abbrev-commit
   staged = diff --cached
   unstage = reset HEAD
   ignore = !echo "$@" >> .gitignore
@@ -67,8 +67,8 @@
   default = simple
 [core]
   excludesfile = ~/.gitignore
-  editor = /usr/local/bin/vim 
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  editor = /usr/local/bin/vim
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [diff]
   tool = diffmerge
 [difftool "diffmerge"]

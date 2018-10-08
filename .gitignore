@@ -1,7 +1,7 @@
 *.egg-info
 *.iml
 *.swo
-*.swp
+.*.swp
 .DS_Store
 .bash_history
 .cfg
@@ -18,3 +18,7 @@ tags
 .offlineimap
 .offlineimap-helpers.py
 .gradle
+Pipfile
+TED.zcat_ffd/
+.pytest_cache
+*.out
