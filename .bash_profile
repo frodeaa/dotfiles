@@ -12,7 +12,7 @@ alias slack="$HOME/go/bin/slack-term -config ~/.slack-term.json"
 export AUDIBLE_ACTIVATION_BYTES=5e855901
 export EDITOR=/usr/local/bin/vim
 export FIGNORE=$FIGNORE:DS_Store
-export GOPATH=$(go env GOPATH)
+# export GOPATH=$(go env GOPATH)
 export HH_CONFIG=hicolor         # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
@@ -78,7 +78,7 @@ update_terminal_cwd() {
     printf '\e]7;%s\a' "$PWD_URL"
 }
 
-pgp_reset() {
+gpg_reset() {
     gpgconf --kill gpg-agent
     gpg-connect-agent updatestartuptty /bye >/dev/null
 }
