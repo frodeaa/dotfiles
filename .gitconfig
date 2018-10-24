@@ -79,3 +79,7 @@
   cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
   trustExitCode = true
 
+[github]
+	user = frode.aa@gmail.com
+[ghi]
+	token = !security find-internet-password -a frode.aa@gmail.com -s github.com -l 'ghi token' -w
