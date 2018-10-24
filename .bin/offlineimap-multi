@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+echo "Run offlineimap"
+offlineimap -u quiet -a Gmail "$@" &
+offlineimap -u quiet -a Dintero "$@" &
+wait
+echo "Last execution: $(date)"

@@ -17,8 +17,8 @@ macro index,pager ge "<save-message>=archive<enter><enter>" "Archive"
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=archive<enter>" "Go to archive"
 macro index gd "<change-folder>=drafts<enter>" "Go to drafts"
-macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
+macro index O "<shell-escape>offlineimap-multi -o<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap-multi -oqf INBOX <enter>" "run offlineimap to sync inbox"
 
 bind compose p postpone-message
 
