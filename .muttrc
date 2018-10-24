@@ -1,5 +1,7 @@
 set spoolfile = "+frodeaa/INBOX"
 
+set wrap=80
+
 source ~/.mutt/frode.aa\@gmail.com
 
 folder-hook frodeaa/* source ~/.mutt/frode.aa\@gmail.com
