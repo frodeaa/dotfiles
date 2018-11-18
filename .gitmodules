@@ -61,9 +61,6 @@
 [submodule ".vim/pack/core/start/indentpython.vim"]
 	path = .vim/pack/core/start/indentpython.vim
 	url = git@github.com:vim-scripts/indentpython.vim.git
-[submodule ".vim/pack/core/start/YouCompleteMe"]
-	path = .vim/pack/core/start/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe
 [submodule ".vim/pack/core/start/vim-flake8"]
 	path = .vim/pack/core/start/vim-flake8
 	url = git@github.com:nvie/vim-flake8
