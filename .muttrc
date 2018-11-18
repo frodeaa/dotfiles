@@ -19,3 +19,8 @@ bind editor ^T    complete
 
 source ~/.mutt-colors-solarized-dark-16.muttrc
 source ~/.mutt/notmuch-mutt.rc
+
+set pgp_use_gpg_agent=yes
+set crypt_verify_sig=yes
+
+source ~/.mutt/gpg.rc
