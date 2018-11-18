@@ -2,6 +2,7 @@
 *.egg-info
 *.iml
 *.swo
+*.spl
 .*.swp
 .DS_Store
 .bash_history
