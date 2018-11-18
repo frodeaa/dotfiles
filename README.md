@@ -6,12 +6,13 @@ Manage all dotfiles without symlinking
 
     git clone --bare git@github.com:frodeaa/dotfiles.git ~/.cfg
 
+
     # configure config alias for managing the repo
     alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
     config checkout
     config submodule init
-    config submodule update
+    config submodule update --init --recursive
 
     # ignore untracked files
     config config --local status.showUntrackedFiles no
@@ -69,7 +70,10 @@ all other plugins
 
 ## brew list
 
-installed formulae.
+installed formulae, see `.brew-list` and `.brew-cask-list` for complete
+list of brew installations
+
+    xargs brew install < .brew-list
 
  - contacts
  - cpanm
