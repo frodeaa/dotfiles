@@ -41,12 +41,9 @@ nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
                             '[Gmail]/Trash':     'trash',
                             '[Gmail]/All Mail':  'archive',
                             }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/Important',
-                                             '[Gmail]/Starred',
-                                             '[Gmail]/flagged',
-                                             '[Gmail]/Chats',
-                                             'flagged',
-                                             ]
+folderfilter = lambda folder: folder in ['INBOX',
+                                         '[Gmail]/All Mail',
+                                         '[Gmail]/Sent Mail']
 ssl = true
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 
@@ -87,12 +84,10 @@ nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
                             '[Gmail]/Trash':     'trash',
                             '[Gmail]/All Mail':  'archive',
                             }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/Important',
-                                             '[Gmail]/Starred',
-                                             '[Gmail]/flagged',
-                                             '[Gmail]/Chats',
-                                             'flagged',
-                                             ]
+folderfilter = lambda folder: folder in ['INBOX',
+                                         '[Gmail]/All Mail',
+                                         '[Gmail]/Sent Mail']
+
 ssl = true
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 
