@@ -24,3 +24,5 @@ TED.zcat_ffd/
 .pytest_cache
 *.out
 .swp
+*.log
+.pytest_cache
