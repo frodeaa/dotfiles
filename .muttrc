@@ -1,11 +1,4 @@
-set spoolfile = "+frodeaa/INBOX"
-
 set wrap=80
-
-source ~/.mutt/frode.aa\@gmail.com
-
-folder-hook frodeaa/* source ~/.mutt/frode.aa\@gmail.com
-folder-hook dintero/* source ~/.mutt/frode\@dintero.com
 
 # Caches
 set header_cache='~/.mutt/.cache/headercache'
@@ -16,14 +9,50 @@ set followup_to=yes
 set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
 bind editor <Tab> complete-query
 bind editor ^T    complete
+bind compose p postpone-message
 
-source ~/.mutt-colors-solarized-light-16.muttrc
-source ~/.mutt/notmuch-mutt.rc
+auto_view text/html
+
+unset move           # gmail does that
+set delete           # don't ask, just do
+unset confirmappend  # don't ask, just do!
+set quit             # don't ask, just do!!
+unset mark_old       # read/new is good enough for me
+
+# Index view options
+set date_format = "!%Y-%m-%d %H:%M %Z"
+set index_format = "%Z  %D  %-20.20F  (%4c)  %s"
+
+set fast_reply=yes
+set include=yes
+
+set editor='vim + -c "set nocp" -c "set textwidth=72" -c "set wrap" -c "silent /^" -c "noh" -c "vmap <leader>s c[... snip ...]<ESC>"
+
+# sort/threading
+set sort     = threads
+set sort_aux = reverse-last-date-received
+set sort_re
 
 set pgp_use_gpg_agent=yes
 set crypt_verify_sig=yes
 
-source ~/.mutt/gpg.rc
+# Pager View Options ---------------------------------
 
 alternative_order text/enriched text/plain text/html
-push <show-version>
+
+folder-hook frodeaa/* source ~/.mutt/accounts/frode.aa\@gmail.com
+folder-hook dintero/* source ~/.mutt/accounts/frode\@dintero.com
+
+macro index,pager ge "<save-message>=archive<enter><enter>" "Archive"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=archive<enter>" "Go to archive"
+macro index gd "<change-folder>=drafts<enter>" "Go to drafts"
+macro index O "<shell-escape>offlineimap-multi -o<enter>" "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap-multi -oqf INBOX <enter>" "run offlineimap to sync inbox"
+
+
+source ~/.mutt/colors/mutt-colors-solarized-light-16.muttrc
+source ~/.mutt/gpg.rc
+source ~/.mutt/notmuch-mutt.rc
+source ~/.mutt/accounts/frode.aa\@gmail.com
+
