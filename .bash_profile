@@ -7,12 +7,10 @@ alias s="cd ~/src"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias lb='vim ~/Documents/logbook/$(date "+%Y-%m-%d").md'
 alias tmp="cd ~/tmp"
-alias slack="$HOME/go/bin/slack-term -config ~/.slack-term.json"
 
 export AUDIBLE_ACTIVATION_BYTES=5e855901
 export EDITOR=/usr/local/bin/vim
 export FIGNORE=$FIGNORE:DS_Store
-# export GOPATH=$(go env GOPATH)
 export HH_CONFIG=hicolor         # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
@@ -27,7 +25,8 @@ export PERL5LIB="$PERL_LOCAL_LIB_ROOT/lib/perl5"
 export PERL_MB_OPT="--install_base \"$PERL_LOCAL_LIB_ROOT\""
 export PERL_MM_OPT="INSTALL_BASE=$PERL_LOCAL_LIB_ROOT"
 export PATH="$PERL_LOCAL_LIB_ROOT/bin:$PATH";
-export PATH=$PATH:$(go env GOPATH)/bin
+GO_BIN_PATH="$(go env GOPATH)"
+export PATH=$PATH:$GO_BIN_PATH
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
@@ -67,6 +66,8 @@ restart_docker() {
     done;
     echo "docker ready!"
 }
+
+dinurl() { while read -r data; do echo $data | grep din; done }
 
 update_terminal_cwd() {
     # Identify the directory using a "file:" scheme URL,
