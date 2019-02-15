@@ -37,12 +37,22 @@ set pgp_use_gpg_agent=yes
 set crypt_verify_sig=yes
 
 # Pager View Options ---------------------------------
+# Vi-like bindings
+bind pager j next-line
+bind pager k previous-line
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
 
 alternative_order text/enriched text/plain text/html
 
 folder-hook frodeaa/* source ~/.mutt/accounts/frode.aa\@gmail.com
 folder-hook dintero/* source ~/.mutt/accounts/frode\@dintero.com
 
+macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 macro index,pager ge "<save-message>=archive<enter><enter>" "Archive"
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=archive<enter>" "Go to archive"
@@ -55,6 +65,7 @@ macro index o "<shell-escape>offlineimap-multi -oqf INBOX <enter>" "run offlinei
 
 source ~/.mutt/colors/mutt-colors-solarized-light-16.muttrc
 source ~/.mutt/gpg.rc
+source ~/.mutt/mailboxes
 source ~/.mutt/notmuch-mutt.rc
 source ~/.mutt/accounts/frode.aa\@gmail.com
 

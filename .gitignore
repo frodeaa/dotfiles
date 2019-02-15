@@ -27,3 +27,4 @@ TED.zcat_ffd/
 .swp
 *.log
 .pytest_cache
+checklist.chk

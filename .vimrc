@@ -60,7 +60,7 @@ endfunction
 
 syntax on
 filetype plugin indent on
-set background=light
+set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
 

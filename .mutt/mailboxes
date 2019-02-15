@@ -1,3 +1,1 @@
-mailboxes +INBOX \
-          +archive \
-          +sent
+mailboxes "+INBOX" "+archive" "+sent" "+INBOX" "+archive" "+sent"
