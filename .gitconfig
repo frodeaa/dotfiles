@@ -34,34 +34,38 @@
   untracked = cyan
 
 [alias]
-  gg = grep --break --heading -n
-  unpushed = log --stat origin/master..HEAD
-  fc = commit --amend -m
-  fo = log --pretty=oneline --shortstat --abbrev-commit
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+  br = branch
   ci = commit
   co = checkout
-  st = status
   df = diff
   dlc = diff --cached HEAD^
-  br = branch
-  log = log --date=local
-  lg = log -p
-  lgs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-  log1 = log --pretty=oneline --abbrev-commit
-  lgr = log --graph --pretty=oneline --abbrev-commit
-  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-  lg1 =log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  slacklg = log --graph --pretty=format:'%ad %Cgreen%aN: %Creset %s' --abbrev-commit
-  staged = diff --cached
-  unstage = reset HEAD
+  fc = commit --amend -m
+  files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+  find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+  fo = log --pretty=oneline --shortstat --abbrev-commit
+  gg = grep --break --heading -n
   ignore = !echo "$@" >> .gitignore
-  serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  lg = log -p
+  lg1 =log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lgr = log --graph --pretty=oneline --abbrev-commit
+  lgs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  log = log --date=local
+  log1 = log --pretty=oneline --abbrev-commit
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   news = log -p HEAD@{1}..HEAD@{0}
   pullit = !pullit.sh
-  find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+  review = !vim -p $(git files) +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+  reviewone = !vim -p +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+  serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+  stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
   show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
-  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+  slacklg = log --graph --pretty=format:'%ad %Cgreen%aN: %Creset %s' --abbrev-commit
+  st = status
+  staged = diff --cached
+  unpushed = log --stat origin/master..HEAD
+  unstage = reset HEAD
 
 [push]
   default = simple
