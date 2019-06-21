@@ -45,11 +45,11 @@ source /usr/local/etc/bash_completion.d/pass
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
 gcalcli_dintero() {
-    source ~/.env/bin/activate && gcalcli --configFolder ~/.gcalcli_dintero $@
+    source ~/.env/bin/activate && gcalcli --config-folder ~/.gcalcli_dintero $@
 }
 
 gcalcli_frodeaa() {
-    source ~/.env/bin/activate && gcalcli --configFolder ~/.gcalcli_frodeaa $@
+    source ~/.env/bin/activate && gcalcli --config-folder ~/.gcalcli_frodeaa $@
 }
 
 print_colors() {
@@ -99,3 +99,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
+eval "$(perl -I$HOME/.perl5/lib/perl5 -Mlocal::lib=$HOME/.perl5)"
