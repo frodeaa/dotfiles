@@ -8,6 +8,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias lb='vim ~/Documents/logbook/$(date "+%Y-%m-%d").md'
 alias tmp="cd ~/tmp"
 
+# fix node-gyp rebuild
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/libffi/lib"
+
+export REVIEW_BASE=master # see alias (git files|stat) ~/.gitconfig
 export AUDIBLE_ACTIVATION_BYTES=5e855901
 export EDITOR=/usr/local/bin/vim
 export FIGNORE=$FIGNORE:DS_Store
