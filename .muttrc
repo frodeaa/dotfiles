@@ -43,10 +43,12 @@ bind pager j next-line
 bind pager k previous-line
 bind attach,index,pager \CD next-page
 bind attach,index,pager \CU previous-page
-bind pager g top
-bind pager G bottom
-bind attach,index g first-entry
-bind attach,index G last-entry
+bind index,pager g group-reply
+# the g is short cut for group reploy, i.e. reply-all
+# bind pager g top
+# bind pager G bottom
+# bind attach,index g first-entry
+# bind attach,index G last-entry
 
 alternative_order text/enriched text/plain text/html
 
@@ -58,7 +60,6 @@ macro index,pager ge "<save-message>=archive<enter><enter>" "Archive"
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=archive<enter>" "Go to archive"
 macro index gd "<change-folder>=drafts<enter>" "Go to drafts"
-
 macro index,pager <f2> '<enter-command>source ~/.mutt/accounts/frode.aa\@gmail.com<enter><change-folder>!<enter>'
 macro index,pager <f3> '<enter-command>source ~/.mutt/accounts/frode\@dintero.com<enter><change-folder>!<enter>'
 macro index O "<shell-escape>offlineimap-multi -o<enter>" "run offlineimap to sync all mail"
