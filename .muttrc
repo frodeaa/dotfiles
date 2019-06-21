@@ -1,9 +1,10 @@
 set wrap=80
 
 # Caches
-set header_cache='~/.mutt/.cache/headercache'
-set message_cachedir='~/.mutt/.cache/messagecache'
-set certificate_file='~/.mutt/.cache/certificates'
+# cache set in each account
+# set header_cache='~/.mutt/.cache/headercache'
+# set message_cachedir='~/.mutt/.cache/messagecache'
+# set certificate_file='~/.mutt/.cache/certificates'
 set followup_to=yes
 
 set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"

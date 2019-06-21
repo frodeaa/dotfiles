@@ -1,3 +1,7 @@
+set header_cache='~/.mutt/.cache/com.gmail.frodeaa/headercache'
+set message_cachedir='~/.mutt/.cache/com.gmail.frodeaa/messagecache'
+set certificate_file='~/.mutt/.cache/com.gmail.frodeaa/certificates'
+
 set mbox_type   = Maildir
 set sendmail    = "/usr/local/bin/msmtp -a frodeaa"
 set realname    = "Frode Aannevik"

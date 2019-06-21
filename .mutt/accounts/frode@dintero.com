@@ -1,3 +1,7 @@
+set header_cache='~/.mutt/.cache/com.dintero.frode/headercache'
+set message_cachedir='~/.mutt/.cache/com.dintero.frode/messagecache'
+set certificate_file='~/.mutt/.cache/com.dintero.frode/certificates'
+
 set mbox_type   = Maildir
 set sendmail    = "/usr/local/bin/msmtp -a dintero"
 set realname    = "Frode Aannevik"
